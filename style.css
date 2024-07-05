@@ -41,7 +41,7 @@ body {
   top: 0;
   left: 0;
   z-index: 20;
-  height: 250px;
+  height: 150px;
 }
 
 .logo h1 {
@@ -50,7 +50,7 @@ body {
 }
 
 .logo img {
-  height: 130px;
+  height: 100px;
   width: 650px;
 }
 
