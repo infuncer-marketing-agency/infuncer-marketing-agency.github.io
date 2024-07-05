@@ -38,8 +38,8 @@ body {
 
 .logo {
   position: absolute;
-  top: 16px;
-  left: 10px;
+  top: 0;
+  left: 0;
   z-index: 20;
   height: 250px;
 }
