@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JV Page - Digital Marketing Demystified</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b4d8;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* New Section for Launch in Design Format */
+.launch-design {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.launch-design h2 {
+    font-size: 2em;
+    color: #0077b6;
+}
+
+.bnnr {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.bnnr img {
+    height: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #00b4d8, #0077b6);
+    color: white;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.why-promote {
+    margin: 50px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-promote h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0077b6;
+}
+
+.why-promote ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-promote ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.why-promote ul li strong {
+    color: #0077b6;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+.product p {
+    margin-bottom: 10px;
+}
+
+.product p strong {
+    color: #00b4d8;
+}
+
+.call-to-action {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.call-to-action button {
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.call-to-action button:hover {
+    background-color: #0077b6;
+}
+
+footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #00b4d8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+}
+
+.swaps {
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swaps h2 {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+.email-day {
+    margin-bottom: 20px;
+}
+
+.email-header {
+    font-size: 1.5em;
+    color: #0077b6;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.email-header:hover {
+    background-color: #e0e0e0;
+}
+
+.email-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+.banner-gallery {
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.banner-gallery h2 {
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0077b6;
+}
+
+.download-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.download-links a {
+    color: #00b4d8;
+    font-size: 1.1em;
+    text-decoration: none;
+    border: 2px solid #00b4d8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-links a:hover {
+    background-color: #00b4d8;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .bnnr img {
+        height: auto;
+    }
+
+    .download-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .call-to-action button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    footer ul li {
+        margin: 5px 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Panamicz Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#swaps">Swaps</a></li>
+                <li><a href="#getlink">Get Link</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bnnr">
+            <img src="images\ebookcover.png" alt="Digital Marketing Demystified">
+        </section>
+
+        <section class="launch-design">
+            <h2>We are launching this ebook at september 06 2024</h2>
+        </section>
+
+        <section class="hero">
+            <h1>Promote "Digital Marketing Demystified: Strategies for Success in the AI Era"</h1>
+            <p>Unlock the potential to earn substantial commissions by promoting top-tier products designed for today's
+                digital landscape.</p>
+        </section>
+
+        <section class="why-promote">
+            <h2>Why Promote These Products?</h2>
+            <ul>
+                <li><strong>High-Quality Content:</strong> Actionable strategies and insights make this ebook a
+                    must-have for digital marketers navigating the AI revolution.</li>
+                <li><strong>Proven Market Demand:</strong> Digital marketing is rapidly evolving, and this book is
+                    perfectly tailored to that demand.</li>
+                <li><strong>Generous Commissions:</strong> Earn 50% per sale on a $49 ebook – that's over 24.5
+                    commission!</li>
+                <li><strong>Upsell Opportunity:</strong> Earn 33% on our upcoming Auto Bulk Emailing Software, priced at
+                    $149.</li>
+                <li><strong>Professional Support:</strong> You'll receive banners, email swipes, and dedicated support
+                    to help you succeed.</li>
+            </ul>
+        </section>
+
+        <section class="product-details">
+            <div class="product">
+                <h3>Digital Marketing Demystified: Strategies for Success in the AI Era</h3>
+                <p>In this comprehensive guide, "Digital Marketing Demystified: Strategies for Success in the AI Era,"
+                    we delve into the intricacies of modern marketing techniques that have reshaped the business
+                    landscape. The digital realm has become the primary arena for businesses to engage with their
+                    audience, and understanding the nuances of digital marketing has become indispensable for success.
+                </p>
+                <p><strong>Price:</strong> $49</p>
+                <p><strong>Commission:</strong> 50% per sale</p>
+            </div>
+
+            <div class="product">
+                <h3>Auto Bulk Emailing Software</h3>
+                <p>Our upcoming software makes sending bulk personalized emails easy and efficient. Perfect for
+                    marketers and businesses.</p>
+                <p><strong>Price:</strong> $149</p>
+                <p><strong>Commission:</strong> 33% per sale</p>
+            </div>
+        </section>
+
+        <section class="call-to-action" id="getlink">
+            <button id="get-link-btn">Get Your Affiliate Link</button>
+        </section>
+
+
+        <section class="swaps" id="swaps">
+            <h2>Email Swaps</h2>
+
+            <div class="email-day" id="day-1">
+                <h3 class="email-header">Day 1 Email</h3>
+                <div class="email-content">
+                    <p><strong>Subject:</strong> Transform Your Marketing with AI – Start Your Journey Today!</p>
+                    <p><strong>Body:</strong> Hey [First Name],<br><br>
+                        Are you ready to take your digital marketing skills to the next level? I’m thrilled to introduce
+                        you to my latest ebook, "Digital Marketing Demystified: Strategies for Success in the AI Era."
+
+                        This comprehensive guide will walk you through the latest strategies that are transforming the
+                        marketing landscape. Whether you're new to the field or a seasoned pro, you'll find actionable
+                        insights that will help you elevate your marketing game in today's AI-driven world.
+
+                        Don't miss out on this opportunity to stay ahead of the curve. Get your copy now and start
+                        mastering the tools and techniques that are shaping the future of marketing.
+
+                        <br> 👉 [paste your link here] <br>
+
+                        Looking forward to hearing about your success!<br><br>
+
+                        Best regards,<br>
+                        [Your Name]<br>
+                        Best Regards,<br>
+                        Bhuvnesh Raghav
+                    </p>
+                </div>
+            </div>
+
+            <div class="email-day" id="day-2">
+                <h3 class="email-header">Day 2 Email</h3>
+                <div class="email-content">
+                    <p><strong>Subject:</strong> Uncover the Secrets to Digital Marketing Success!</p>
+                    <p><strong>Body:</strong> Hi [First Name],<br><br>
+                        Hope you're doing well! I wanted to follow up on yesterday's email about my ebook, "Digital
+                        Marketing Demystified: Strategies for Success in the AI Era."
+
+                        In today's fast-paced digital world, it's crucial to stay ahead of the competition. My ebook is
+                        packed with practical tips and advanced strategies that will help you do just that. From
+                        mastering the basics to leveraging AI for better results, this guide has everything you need to
+                        succeed.
+
+                        If you haven’t grabbed your copy yet, now is the perfect time to dive in and start transforming
+                        your marketing approach.
+
+                        <br>👉 [paste your link here]<br>
+
+                        Here's to your success in the digital marketing world!<br><br>
+                        Best regards,<br>
+                        [Your Name]<br>
+                        Best Regards,<br>
+                        Bhuvnesh Raghav
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="email-day" id="day-3">
+                <h3 class="email-header">Day 3 Email</h3>
+                <div class="email-content">
+                    <p><strong>Subject:</strong> Your Blueprint to AI-Powered Marketing Success Awaits!</p>
+                    <p><strong>Body:</strong> Hi [First Name],<br><br>
+                        Just checking in to see if you've had a chance to explore my ebook, "Digital Marketing
+                        Demystified: Strategies for Success in the AI Era." If not, you’re missing out on a powerful
+                        resource that could change the way you approach digital marketing.
+
+                        This book isn’t just about theory – it’s a practical guide that takes you step by step through
+                        the strategies that are working right now in the AI era. Whether you want to boost your brand's
+                        online presence or drive more sales, these insights are designed to help you achieve your goals.
+
+                        Don't let this opportunity pass by! Equip yourself with the knowledge and tools that will keep
+                        you ahead in the ever-evolving digital landscape.
+
+                        <br>👉 [paste your link here]<br>
+
+                        I can't wait to hear how these strategies work for you!<br><br>
+                        Best regards,<br>
+                        [Your Name]<br>
+                        Best Regards,<br>
+                        Bhuvnesh Raghav
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="email-day" id="day-4">
+                <h3 class="email-header">Day 4 Email</h3>
+                <div class="email-content">
+                    <p><strong>Subject:</strong> Ready to Revolutionize Your Marketing Strategy?</p>
+                    <p><strong>Body:</strong> Hi [First Name],<br><br>
+                        I wanted to follow up and make sure you didn’t miss out on this incredible opportunity. My
+                        ebook, "Digital Marketing Demystified: Strategies for Success in the AI Era," is more than just
+                        a read—it’s your blueprint for mastering digital marketing in today's AI-driven world.
+
+                        This guide covers everything from the fundamentals to advanced strategies that can take your
+                        marketing efforts to the next level. Whether you're looking to improve your social media game,
+                        optimize your SEO, or harness the power of AI, this book has got you covered.
+
+                        Don’t wait—start revolutionizing your marketing strategy today!
+
+                        <br>👉 [paste your link here]<br>
+
+                        Here’s to your continued success in digital marketing!<br><br>
+                        Best regards,<br>
+                        [Your Name]<br>
+                        Best Regards,<br>
+                        Bhuvnesh Raghav
+                    </p>
+                </div>
+            </div>
+
+            <!-- Add more days as needed -->
+        </section>
+
+
+        <section class="banner-gallery">
+            <h2>Affiliate Banners</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images\ebookcover.png" alt="Banner 1" class="banner-image">
+                    <button class="download-btn">Download</button>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Digital Marketing Demystified banner for instagram.png" alt="Banner 2"
+                        class="banner-image">
+                    <button class="download-btn">Download</button>
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Digital Marketing 3.jpg" alt="Banner 3" class="banner-image">
+                    <button class="download-btn">Download</button>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Panamicz. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="https://panamicz.site/htlp.html">Contact Me</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById("get-link-btn").addEventListener("click", function () {
+            alert("Your affiliate link is: https://panamicz.com/affiliate-link");
+        });
+
+
+        document.querySelectorAll('.email-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+
+                // Toggle display of the content
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+
+
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', event => {
+                const banner = event.target.previousElementSibling;
+                const bannerSrc = banner.src;
+                const link = document.createElement('a');
+                link.href = bannerSrc;
+                link.download = bannerSrc.split('/').pop(); // Use the image filename as the download name
+                link.click();
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
