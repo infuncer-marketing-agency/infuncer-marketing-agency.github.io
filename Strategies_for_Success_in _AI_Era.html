@@ -1,0 +1,657 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Strategies for Success in the AI Era - Panamicz</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+body {
+  background-color: #eee;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 14px;
+  border: none;
+}
+#lightSlider li {
+}
+
+.demo {
+  width: 100%;
+}
+
+ul {
+  list-style: none outside none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+li {
+  display: block;
+  float: left;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.stars i {
+  color: #f6d151;
+}
+
+.stars span {
+  font-size: 13px;
+}
+
+hr {
+  color: #d4d4d4;
+}
+
+.badge {
+  padding: 5px !important;
+  padding-bottom: 6px !important;
+}
+
+.badge i {
+  font-size: 10px;
+}
+
+.profile-image {
+  width: 35px;
+}
+
+.comment-ratings i {
+  font-size: 13px;
+}
+
+.username {
+  font-size: 17px;
+}
+
+.comment-profile {
+  line-height: 17px;
+}
+
+.date span {
+  font-size: 12px;
+}
+
+.p-ratings i {
+  color: #f6d151;
+  font-size: 12px;
+}
+
+.btn-long {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+.buttons .btn {
+  height: 46px;
+}
+
+.buttons .cart {
+  border-color: #ff7676;
+  color: #4141d7;
+}
+
+.buttons .cart:hover {
+  background-color: #e86464 !important;
+  color: #fff;
+}
+
+.fontS{
+   font-size: 20px;
+}
+
+.buttons .buy {
+  color: #ff4444;
+  background-color: #ffffff;
+  border-color: #010101;
+}
+
+.buttons .buy:focus,
+.buy:active {
+  color: #fff;
+  background-color: #ff7676;
+  border-color: #ff7676;
+  box-shadow: none;
+}
+
+.buttons .buy:hover {
+  color: #fff;
+  background-color: #e86464;
+  border-color: #e86464;
+}
+
+.buttons .wishlist {
+  background-color: #fff;
+  border-color: #ff7676;
+}
+
+.buttons .wishlist:hover {
+  background-color: #e86464;
+  border-color: #e86464;
+  color: #fff;
+}
+
+.buttons .wishlist:hover i {
+  color: #fff;
+}
+
+.buttons .wishlist i {
+  color: #ff7676;
+}
+
+.comment-ratings i {
+  color: #f6d151;
+}
+
+.followers {
+  font-size: 9px;
+  color: #686464;
+}
+
+.store-image {
+  width: 42px;
+}
+
+.card-img-top{
+  height: 200px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.bullet-text {
+  font-size: 16px;
+}
+
+.my-color {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label.radio {
+  cursor: pointer;
+}
+
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+label.radio span {
+  border: 2px solid #8f37aa;
+  display: inline-block;
+  color: #8f37aa;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-transform: uppercase;
+  transition: 0.5s all;
+}
+
+label.radio .red {
+  background-color: red;
+  border-color: red;
+}
+
+label.radio .blue {
+  background-color: blue;
+  border-color: blue;
+}
+
+label.radio .green {
+  background-color: green;
+  border-color: green;
+}
+
+label.radio .orange {
+  background-color: orange;
+  border-color: orange;
+}
+
+label.radio input:checked + span {
+  color: #fff;
+  position: relative;
+}
+
+label.radio input:checked + span::before {
+  opacity: 1;
+  content: "\2713";
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  left: 4px;
+}
+
+.card-body {
+  padding: 0.3rem 0.3rem 0.2rem;
+}
+
+.offer{
+  text-decoration: line-through;
+  font-weight: 200;
+  color: #4e4d4d;
+}
+
+
+
+/* Hide something2 on desktops */
+@media only screen and (min-width: 1024px) {
+  .hidesdesk {
+    display: none;
+  }
+}
+
+.white{
+  color: #fff;
+}
+
+
+/*timer*/
+
+.size{
+  font-size: 1.6rem;
+}
+
+.timer-container {
+  text-align: center;
+width: 30%;
+  background-color: #ff7474;
+  border-radius: 10px;
+  
+}
+
+.timer-container h2 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+#timer {
+  font-size: 1.5rem;
+  color: #ffffff;
+ 
+}
+
+/* Hide something on phones */
+@media only screen and (max-width: 600px) {
+  .hidep {
+    display: none;
+  }
+  .timer-container{
+    width: 50%;
+  }
+}
+
+
+#popup {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background-color: #fecaca;
+  padding: 10px;
+  display: none;
+  transition: ease .9s;
+  border-radius: 8px;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  z-index: 10000;
+  box-shadow: 2px 3px 10px #ff4848;
+}
+</style>
+<body class='snippet-body'>
+   
+    <link rel='stylesheet' href='https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css'>
+    
+    <div class="container-fluid mt-2 mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-5 pr-2">
+                <div class="card">
+                    <div class="demo">
+                        <ul id="lightSlider">
+                            <li data-thumb="https://i.imgur.com/KZpuufK.jpg">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoyUDurJ2SlgeMQgmUqZhKRTUuz_OvPgePrYPziaD4ecDGMHx8vhvU7p5IvTNTbjUmYrBmg4Sxxw_-TqLJXnJhstkjzRM3Y6bo6NOeIZ-mlZN7aoBUteO9ToSBi4MuHC4JMHkZlMB1kQcPwielL6ZNXH_sefyRBoWFv3KRllb57jaA_POdLhL5TwBmYgK3/s320/ebookcover.png" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Reviews-->
+                <div class="card mt-2 hidep">
+                    <h6>Free Bonuses:</h6>
+                    <div class="d-flex flex-row">
+                        <div class="stars"> <i class=""></i> <i class=""></i> <i
+                                class=""></i> <i class=""></i> </div> <span
+                            class="ml-1 font-weight-bold fontS"></span>
+                    </div>
+                    <hr>
+                    <div class="badges"> <span class="badge bg-white ">I am going to provide you 2 free bonuses with this amazing Ebook</span>  <span class="badge bg-white "> <i
+                                ></i>  </span> <span class="">
+                                   <i></i> <i></i> <i ></i> <i
+                              ></i> <span class="ml-1"></span> </span> </div>
+                    <hr>
+                    <div class="comment-section">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center"> <img
+                                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip8HhJ2hOW83K_ha2O03s3OVpkqVDWSydHp8s9Dw7Xbn9hnOl2kb4vvrWDHVFWlQHqhBKNWesq7UOFnFhdTwEGAfyVB34jfLqL3gCQqi38wXTIwAcx7cAaMmYtVuY-9tGv7yy8afvPWW78A8EPiTxtGC-6PKsgoBn4GH7L8quIeCKOQRUvE4YCoA5j7zu9/s320/cc.png"
+                                    class=" profile-image">
+                                <div class="d-flex flex-column ml-1 comment-profile">
+                                    <div class="comment-ratings"> <i class=""></i> <i class=""></i>
+                                        <i class=""></i> <i class=""></i>
+                                    </div> <span class="username">Email Marketing Guide</span>
+                                </div>
+                            </div>
+                            <div class="date"> <span class="text-muted">#FreeBonus1</span> </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center"> <img
+                                    src="images\Content Strategies with AI.jpg"
+                                    class=" profile-image">
+                                <div class="d-flex flex-column ml-1 comment-profile">
+                                    <div class="comment-ratings"> <i class=""></i> <i class=""></i>
+                                        <i class=""></i> <i class=""></i>
+                                    </div> <span class="username">Content Strategies using Ai</span>
+                                </div>
+                            </div>
+                            <div class="date"> <span class="text-muted">#FreeBonus2</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="p-ratings"> <i class=""></i> <i class=""></i> <i
+                                class=""></i> <i class=""></i> </div> <span class="ml-1"></span>
+                    </div>
+                   
+                    <div class="about"> <span class="font-weight-bold size fontS">Strategies
+                            for Success in the AI Era With 2 Free Bonus</span>
+                            
+                        <h4 class="font-weight-bold fontS">Price : <span class="offer"> $100</span> ₹49 </h4>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-dark btn-long buy">Make Payment Now</button>
+                    </div>
+                    <hr>
+                    <div class="product-description">
+                        <div class="d-flex flex-row align-items-center"> <i ></i> <span
+                                class="ml-1"></span> </div>
+                        <div class="mt-2"> <span class="font-weight-bold fontS">Description</span>
+                            <p>
+                                Are you ready to dive into the world of digital marketing and discover the strategies
+                                that top marketers use to skyrocket their success? Look no further than our exclusive
+                                ebook, "Digital Marketing Demystified: Strategies for Success in the AI Era."
+
+                                In this comprehensive guide, you'll embark on a journey through 15 detailed chapters,
+                                each packed with actionable insights, expert advice, and proven techniques that will
+                                transform your digital marketing game.
+                            </p>
+                            <h6>Discover the Power of Digital Marketing:</h6>
+                            <div class="bullets">
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Explore the fundamentals of digital marketing, including
+                                        SEO, content strategies, and social media engagement.</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Harness the potential of AI in revolutionizing digital
+                                        marketing, from data analysis to personalized customer experiences.</span>
+                                </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Master organic marketing techniques to boost your online
+                                        visibility, attract qualified leads, and build lasting relationships with
+                                        customers.</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Dive into the world of paid marketing with in-depth guides
+                                        on Google Ads, Facebook Ads, and effective bidding strategies.</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Uncover the importance of follow-up marketing and learn how
+                                        to leverage cross-selling and up-selling techniques to maximize sales
+                                        opportunities.</span> </div>
+                            </div>
+                            <p style="margin-top: 10px;">
+                                But wait, there's more! As a limited-time offer, we're providing exclusive access to
+                                bonus marketing tactics that will take your strategies to the next level:
+                            </p>
+                            <div class="bullets">
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Conversion optimization strategies to turn leads into loyal
+                                        customers.Conversion optimization strategies to turn leads into loyal
+                                        customers.</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Email marketing hacks for high open rates and
+                                        engagement.</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Social media growth strategies to build a thriving online
+                                        community.</span> </div>
+
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span
+                                        class="bullet-text">Analytics mastery for data-driven decision-making and
+                                        campaign optimization.</span> </div>
+                            </div>
+
+                            <p style="margin-top: 10px;">
+                                Don't miss out on this opportunity to become a digital marketing master! Grab your copy
+                                of "Digital Marketing Demystified" today and elevate your marketing game to new heights.
+                                Act fast, as this limited-time offer won't last forever. Start your journey to marketing
+                                success now!
+                            </p>
+
+                        </div>
+                        <div class="mt-2"> <span class="font-weight-bold fontS">Panamicz</span> </div>
+                        <div class="d-flex flex-row align-items-center"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSmUjGI47IL6L-XDmp6hImU25_6wldERfFpI-2shYrvFUlrljghpa0WUWjwoIFyISl2VDzh9r4q9-fN6tdd_4ExEsObsedwC8WMu6xJQwcEbM-Z8_QcLCLEOCbTHBagXwJnNSETf2PLUf4dQRI5khj_ruUp-8XnKSTEbOTdB1MhKyY7GbiaAXn6dDDse8s/s720/IMG_20230603_200302_420.jpg"
+                                class="rounded-circle store-image">
+                            <div class="d-flex flex-column ml-1 comment-profile">
+                                <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                        class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span
+                                    class="username">Bhuvnesh Raghav</span> <small class="followers"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-2"> <span>Free Bonus:</span>
+                    <div class="similar-products mt-2 d-flex flex-row">
+                        <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img
+                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip8HhJ2hOW83K_ha2O03s3OVpkqVDWSydHp8s9Dw7Xbn9hnOl2kb4vvrWDHVFWlQHqhBKNWesq7UOFnFhdTwEGAfyVB34jfLqL3gCQqi38wXTIwAcx7cAaMmYtVuY-9tGv7yy8afvPWW78A8EPiTxtGC-6PKsgoBn4GH7L8quIeCKOQRUvE4YCoA5j7zu9/s320/cc.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">Email Marketing Guide</h6>
+                                <p>
+                                    price: $0.00 <span style="text-decoration: line-through;">$39</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img
+                                src="images\Content Strategies with AI.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">Content Strategies using Ai</h6>
+                                <p>
+                                    price: $0.00 <span style="text-decoration: line-through;">$49</span>
+                                </p>
+                            </div>
+
+                        </div>
+                        
+                       
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- <div class="card mt-2 hidesdesk">
+        <h6>Reviews</h6>
+        <div class="d-flex flex-row">
+            <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                    class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span
+                class="ml-1 font-weight-bold fontS"></span>
+        </div>
+        <hr>
+        <div class="badges"> <span class="badge bg-white">All (2330)</span> <span class="badge bg-white"> <i
+                    class="fa fa-comments-o"></i> 235 </span> <span class="badge bg-warning"> <i
+                    class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                    class="fa fa-star"></i> <span class="ml-1">2,330</span> </span> </div>
+        <hr>
+        <div class="comment-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center"> <img
+                        src="https://media.licdn.com/dms/image/D4D03AQFXBB9yuaPBJQ/profile-displayphoto-shrink_400_400/0/1681911032816?e=1718236800&v=beta&t=HraMIg0LtiLZmnG9c6YBNWNnOneg5eg1RXeyQL8LZgk"
+                        class="rounded-circle profile-image">
+                    <div class="d-flex flex-column ml-1 comment-profile">
+                        <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                        </div> <span class="username">Rajkamal Tripathi</span>
+                    </div>
+                </div>
+                <div class="date"> <span class="text-muted">2 march</span> </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center"> <img
+                        src="https://media.licdn.com/dms/image/D5603AQFkWGxMgx8snQ/profile-displayphoto-shrink_800_800/0/1702452902150?e=1718236800&v=beta&t=ZaeyA0hm-N68OpKQZDw9wft8eV-Yke1PcrZQYWmrmEc"
+                        class="rounded-circle profile-image">
+                    <div class="d-flex flex-column ml-1 comment-profile">
+                        <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                        </div> <span class="username">Vikash Sharma</span>
+                    </div>
+                </div>
+                <div class="date"> <span class="text-muted">12 jan</span> </div>
+            </div>
+        </div>
+    </div> -->
+
+   
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script src='https://sachinchoolur.github.io/lightslider/dist/js/lightslider.js'></script>
+
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+   
+        <script>
+           
+        const names = [
+            "Rohan",
+            "Priya",
+            "Rahul",
+            "Anjali",
+            "Arun",
+            "Neha",
+            "Amit",
+            "Divya",
+            "Raj",
+            "Sneha",
+            "Sachin",
+            "Pooja",
+            "Vivek",
+            "Shreya",
+            "Karan",
+            "Deepika",
+            "Vikas",
+            "Swati",
+            "Sanjay",
+            "Kavita"
+        ];
+
+        const cities = [
+            "Mumbai",
+            "Delhi",
+            "Bangalore",
+            "Hyderabad",
+            "Chennai",
+            "Kolkata",
+            "Pune",
+            "Ahmedabad",
+            "Jaipur",
+            "Lucknow",
+            "Surat",
+            "Kanpur",
+            "Nagpur",
+            "Visakhapatnam",
+            "Indore",
+            "Thane",
+            "Bhopal",
+            "Patna",
+            "Vadodara",
+            "Ghaziabad"
+        ];
+
+        function getRandomElement(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            const randomName = getRandomElement(names);
+            const randomCity = getRandomElement(cities);
+            popup.textContent = `${randomName} from ${randomCity} Just Buy This Ebook!`;
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 4000);
+        }
+
+        setTimeout(showPopup, 3000);
+        setInterval(showPopup, 5000);
+    
+
+
+
+      //timer code 
+      
+      const countdownDuration = 2 * 60 * 60; // 2 hours in seconds
+let timeRemaining = countdownDuration;
+
+function updateTimer() {
+    const hours = Math.floor(timeRemaining / 3600);
+    const minutes = Math.floor((timeRemaining % 3600) / 60);
+    const seconds = timeRemaining % 60;
+
+    const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    document.getElementById('timer').innerText = formattedTime;
+
+    if (timeRemaining > 0) {
+        timeRemaining--;
+    } else {
+        timeRemaining = countdownDuration;
+    }
+}
+
+// Initial call to update timer
+updateTimer();
+
+// Update the timer every second
+setInterval(updateTimer, 1000);
+
+        </script>
+</body>
+
+</html>
