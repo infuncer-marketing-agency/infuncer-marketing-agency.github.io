@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JV Page - Digital Marketing Demystified</title>
+    <link rel="stylesheet" href="style.css">
+
     <style>
         /* General Reset */
 * {
@@ -39,13 +41,15 @@ nav ul {
 }
 
 nav ul li {
+   
     margin-left: 20px;
 }
 
 nav ul li a {
+
     color: #fff;
     text-decoration: none;
-    font-size: 23px;
+     font-size: 23px;
     transition: color 0.3s;
 }
 
@@ -76,6 +80,41 @@ main {
     margin-bottom: 10px;
     justify-content: center;
 }
+
+
+.contest {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contest h2 {
+            color: #0077b6;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .contest p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .contest ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contest ul li {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .contest ul li strong {
+            color: #00b4d8;
+        }
 
 .bnnr img {
     height: 300px;
@@ -402,7 +441,8 @@ footer ul li a:hover {
             <ul>
                 <li><a href="#swaps">Swaps</a></li>
                 <li><a href="#getlink">Get Link</a></li>
-                <li><a href="Strategies_for_Success_in _AI_Era.html">Sales page</a></li>
+                <li><a href="#contest">Contest</a></li>
+                <li><a href="https://panamicz.site/Strategies_for_Success_in _AI_Era.html">sales Page</a></li>
             </ul>
         </nav>
     </header>
@@ -438,6 +478,22 @@ footer ul li a:hover {
             </ul>
         </section>
 
+
+        <!--Section for contest-->
+
+        <section class="contest" id="contest">
+            <h2>Affiliate Contest</h2>
+            <p>To celebrate the launch, we’re holding an exclusive contest for our top affiliates! Win big by promoting "Digital Marketing Demystified" and earn massive rewards!</p>
+            <ul>
+                <li><strong>1st Place:</strong> $1000 for the first affiliate to reach $1500 in commissions</li>
+                <li><strong>2nd Place:</strong> $950 for the second affiliate to reach $1500</li>
+                <li><strong>3rd Place:</strong> $900 for the third affiliate to reach $1500</li>
+            </ul>
+            <p>Get started and be one of the top earners today!</p>
+        </section>
+
+        <!--end-->
+
         <section class="product-details">
             <div class="product">
                 <h3>Digital Marketing Demystified: Strategies for Success in the AI Era</h3>
@@ -460,9 +516,9 @@ footer ul li a:hover {
         </section>
 
         <section class="call-to-action" id="getlink">
-         <a href="https://www.jvzoo.com/affiliate/affiliateinfonew/index/410873">
+            <a href="https://www.jvzoo.com/affiliate/affiliateinfonew/index/410873">
             <button id="get-link-btn">Get Your Affiliate Link</button>
-        </a>    
+        </a>
         </section>
 
 
@@ -607,7 +663,7 @@ footer ul li a:hover {
     <footer>
         <p>&copy; 2024 Panamicz. All rights reserved.</p>
         <ul>
-            <li><a href="privacypolicy.html">Privacy Policy</a> </li> |
+           <li><a href="privacypolicy.html">Privacy Policy</a> </li> |
            <li><a href="Terms_and_Conditions.html">Terms & Conditions</a> </li> |
            <li><a href="disclemer.html">Disclaimer</a></li> 
             <li><a href="about.html">About Me</a></li>
@@ -616,6 +672,9 @@ footer ul li a:hover {
     </footer>
 
     <script>
+       
+
+
         document.querySelectorAll('.email-header').forEach(header => {
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
