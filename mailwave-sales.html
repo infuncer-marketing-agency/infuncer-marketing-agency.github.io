@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Bulk Mailer Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-bottom: 23px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #232323;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px;
+    background: url("Leonardo_Phoenix_A_futuristic_hightech_illustration_of_a_human_0.jpg") no-repeat center center/cover;
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #00000088;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0);
+}
+
+.hero-img {
+    max-width: 40%;
+}
+
+/* Features Section */
+.features {
+    background-color: rgb(255, 255, 255);
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 30%;
+}
+
+.feature-card img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+/* Demo Section */
+.demo video {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: #f0f8f9;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pricing-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 30%;
+}
+
+.pricing-card p {
+    margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #fff;
+}
+
+.testimonial {
+    background-color: #0a4043;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+/* Features Section - Mailwave */
+.features {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.features p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 30%;
+    margin: 10px 0;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #232323;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .feature-grid {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+
+
+/* Footer */
+footer {
+   
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .feature-grid, .pricing-cards {
+        flex-direction: column;
+    }
+
+    .feature-card, .pricing-card {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Automate Your Email Campaigns with Ease</h1>
+            <p>Efficient, reliable, and scalable bulk email solutions for businesses of any size.</p>
+            <a href="#pricing" class="cta-btn">Get Started Now</a>
+        </div>
+        <img src="images\icon.png" alt="Bulk Mailer Software UI" class="hero-img">
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+               
+                <h3>Automated Email Sequences</h3>
+                <p>Set it and forget it—our software manages your email campaigns from start to finish.</p>
+            </div>
+            <div class="feature-card">
+                
+                <h3>Customizable Templates</h3>
+                <p>Beautiful email templates you can edit to suit your brand in just a few clicks.</p>
+            </div>
+            <div class="feature-card">
+               
+                <h3>Real time mail logs</h3>
+                <p>Mailwave gives you a real time mail log system to let you know that how many mails has been sent or not</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo">
+        <h2>See It in Action</h2>
+        <video controls>
+            <source src="demo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>One-Time Payment</h2>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                
+                <p>Unlimitad emails sends and liftime access and will will provide you to an ebook of email marketing as free bonus if you buy it</p>
+                <p>$99 <span>one-time payment</span></p>
+                
+                <!--Jvzoo buy button -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-carousel">
+           
+            <div class="testimonial">
+                <p>"Simple to use and very effective. We saw immediate results. Well I use my own buld software to outreach for panamicz because i belive in my own things."</p>
+                <p>- Bhuvnesh Raghav, CEO at panamicz</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="features">
+        <h1>Mailwave – Your All-in-One Solution for Effortless Email Marketing!</h1>
+        <p>Ready to supercharge your email marketing efforts? <strong>Mailwave</strong> is here to take the hassle out of managing bulk emails, allowing you to focus on what matters—growing your business!</p>
+    
+        <div class="feature-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <h3>Automated Email Sequences</h3>
+                <p>Tired of manually sending emails? Set up automated email sequences and let Mailwave do the hard work for you! With our “set it and forget it” feature, you can schedule campaigns that will run on autopilot, nurturing leads and engaging customers—all while you focus on scaling your business.</p>
+            </div>
+    
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <h3>Customizable Templates</h3>
+                <p>Make your emails look stunning with Mailwave’s professionally designed templates. You can easily customize them to match your brand’s style in just a few clicks—no design skills needed! Stand out in your customers' inboxes and drive more conversions.</p>
+            </div>
+    
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <h3>Real-Time Mail Logs</h3>
+                <p>Stay informed with our real-time mail log system. Monitor your campaigns with up-to-the-minute updates on how many emails have been sent, delivered, and opened. Get insights into what’s working and what’s not, so you can refine your strategy and get the best results.</p>
+            </div>
+        </div>
+    
+        <a href="#" class="cta-btn">Start Your Email Revolution Today!</a>
+    </section>
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Panamicz. All rights reserved.</p>
+        <p><a href="https://panamicz.site/privacypolicy.html"> Privacy Policy </a>| <a href="https://panamicz.site/Terms_and_Conditions.html">Terms of Service</a> | <a href="https://panamicz.site/disclemer.html"> Disclaimer</a> | <a href="https://panamicz.site/help.html">Help</a> </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

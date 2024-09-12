@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Download</title>
+   
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+}
+
+.thank-you-message h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.thank-you-message p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.download-buttons button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.download-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.ebook-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.ebook-link {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.ebook-link:hover {
+    background-color: #218838;
+}
+
+.close-modal {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="thank-you-message">
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Your software is ready to download. You can also get our exclusive Email Marketing ebook for free (worth $50).</p>
+        </div>
+        
+        <div class="download-buttons">
+            <a id="download-software" href="https://drive.google.com/file/d/1oqCn-xcdr6HHLV90Vo0yvmuaCl5yOd6-/view?usp=sharing">
+                <button>Download Software for Windows</button>
+            </a>
+            <button id="download-ebook">Get Free Ebook</button>
+        </div>
+
+        <div id="ebook-info" class="ebook-modal hidden">
+            <div class="modal-content">
+                <h2>Free Bonus: Email Marketing Ebook</h2>
+                <p>Thank you for purchasing the software! As a token of appreciation, we are offering this ebook absolutely free. Download it now to boost your email marketing game.</p>
+                <a href="https://docs.google.com/document/d/1S5LDjnai9dK_AGuAeCt7dza86QJvsqc6_vmGD6euwVQ/edit?usp=drive_link" class="ebook-link">Download Ebook</a>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
