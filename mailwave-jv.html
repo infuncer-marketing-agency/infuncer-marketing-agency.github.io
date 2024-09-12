@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailWave - JV Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff9800;
+}
+
+/* Main Section */
+.main-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    margin-bottom: 30px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    border: 3px solid #ff9800;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.feature {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fafafa;
+    border-left: 5px solid #ff9800;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Affiliate Section */
+.affiliate-info {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.affiliate-info h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.affiliate-info ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.affiliate-info ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Popup Form */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff9800;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .navbar a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .features h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 13px;
+        margin: 0 8px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .video-container video {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .features h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .features h2 {
+        font-size: 1.4rem;
+    }
+
+    .feature h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature p {
+        font-size: 0.85rem;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .form-content {
+        width: 90%;
+    }
+}
+
+/* Contest Section */
+.contest-details {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contest-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contest-details p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.contest-prizes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prize {
+    background-color: #fafafa;
+    padding: 20px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.prize:hover {
+    transform: translateY(-5px);
+}
+
+.prize h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.prize p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.prize span {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.terms {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .contest-prizes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prize h3 {
+        font-size: 1.3rem;
+    }
+
+    .prize p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contest-prizes {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e67e22;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 6px 3px rgba(230, 126, 34, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* Styling the Email Swaps Section */
+/* Styling the Email Swaps Section */
+.swaps {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.swaps h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Styling for Each Email Day */
+.email-day {
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.email-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #e67e22;
+    cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+    transition: color 0.3s ease;
+}
+
+.email-header:hover {
+    color: #d35400;
+}
+
+/* Initially hiding the email content */
+.email-content {
+    display: none; /* Content is hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease;
+}
+
+.email-content.show {
+    display: block;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .swaps {
+        padding: 30px 15px;
+    }
+
+    .swaps h2 {
+        font-size: 2rem;
+    }
+
+    .email-header {
+        font-size: 1.5rem;
+    }
+
+    .email-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .swaps {
+        padding: 20px 10px;
+    }
+
+    .swaps h2 {
+        font-size: 1.8rem;
+    }
+
+    .email-header {
+        font-size: 1.3rem;
+    }
+
+    .email-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* General styling for the banner section */
+.banner-gallery {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.banner-gallery h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Grid layout for gallery items */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Gallery item styling */
+.gallery-item {
+    height: auto;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+}
+
+/* Banner image styling */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Download button styling */
+.download-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer */
+footer {
+   
+   background-color: #333;
+   color: white;
+   padding: 20px;
+   text-align: center;
+}
+
+footer p{
+    color: white;
+   
+}
+
+footer p a{
+    color: white;
+   margin: 10px 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-gallery {
+        padding: 30px 15px;
+    }
+
+    .banner-gallery h2 {
+        font-size: 24px;
+    }
+
+    .download-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-gallery {
+        padding: 20px 10px;
+    }
+
+    .banner-gallery h2 {
+        font-size: 20px;
+    }
+
+    .download-btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="MailWave Logo">
+        </div>
+        <nav class="navbar">
+            <a href="#swaps">Email Swaps</a>
+            <a href="#">Sales Page</a>
+            <a href="#get-link-btn">Get Link</a>
+        </nav>
+    </header>
+
+    <!-- Main Section with Video -->
+    <section class="main-section">
+        <div class="video-container">
+            <video controls>
+                <source src="affiliate-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1>Promote MailWave - Your Next Big Affiliate Opportunity!</h1>
+        <p>Earn <strong>$50 per sale</strong> (33% commission) and help marketers scale their email campaigns.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why MailWave is the Perfect Tool for Your Audience</h2>
+       
+        <div class="feature">
+            <h3>Easy to learn and easy to use</h3>
+            <p>Eailwave is very easy to use and easy to learn software , Youn can learn it in just few minuts</p>
+        </div>
+
+        <div class="feature">
+            
+            <h3>Bulk Email Sending</h3>
+            <p>Send thousands of personalized emails with just a few clicks using our powerful bulk email engine.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>Real-Time Mail Logs</h3>
+            <p>Mailwave gives you a real time mail log system to let you know that how many mails has been sent or not</p>
+        </div>
+    </section>
+
+    <!-- Affiliate Promotion Section -->
+    <section class="affiliate-info">
+        <h2>Why Promote MailWave?</h2>
+        <p>As an affiliate of MailWave, you'll be promoting a high-demand tool for businesses and marketers looking to automate and scale their email outreach. Here’s why you should get on board :</p>
+        <ul>
+        <li><strong>Lucrative Earning Potential:</strong> Earn up to $75 per sale, with an additional opportunity to win up to $4,500 by participating in our affiliate contest.</li>
+<li><strong>Generous Commissions:</strong> Receive $50 for each sale, representing a 50% commission on the product price.</li>
+<li><strong>High-Demand Product:</strong> Our email marketing tool is always in demand, offering unique features that make it an essential addition for businesses.</li>
+<li><strong>Proven Success:</strong> Enjoy high conversion rates, supported by comprehensive and detailed promotional materials.</li>
+<li><strong>Exclusive Contest:</strong> Participate in our contest for a chance to win up to $4,500, alongside your regular commissions.</li>
+<li><strong>Additional $24 Earnings:</strong> Upsell our 'Digital Marketing Demystified' ebook to earn an extra $24 per sale, with a 50% commission.</li>
+   
+        </ul>
+
+
+        <section class="contest-details" id="contest">
+            <h2>Affiliate Contest Details</h2>
+            <p>As a special promotion for our affiliates, we are running a contest with some incredible rewards! Generate $5000 in commissions, and you could win cash prizes!</p>
+        
+            <div class="contest-prizes">
+                <div class="prize">
+                    <h3>1st Place</h3>
+                    <p>Generate $5000 in commissions and win <span>$4,500</span></p>
+                </div>
+                <div class="prize">
+                    <h3>2nd Place</h3>
+                    <p>Generate $5000 in commissions and win <span>$4,000</span></p>
+                </div>
+                <div class="prize">
+                    <h3>3rd Place</h3>
+                    <p>Generate $5000 in commissions and win <span>$3,500</span></p>
+                </div>
+                <div class="prize">
+                    <h3>4th Place</h3>
+                    <p>Generate $5000 in commissions and win <span>$3,000</span></p>
+                </div>
+            </div>
+        
+            <p class="terms">Terms & Conditions apply. Contest is subject to end or change at any time. Prizes will be distributed to the top-performing affiliates based on total commission generated during the promotion period.</p>
+           <button class="btn">Join Contest</button>
+        </section>
+
+
+
+        <section class="call-to-action" id="get-link-btn"></section>
+            
+        <button class="btn" id="link-btn">Get Your Affiliate Link</button>
+    
+    </section>
+        
+    </section>
+
+
+   
+
+    <!-- Popup Form -->
+    <div id="popup-form" class="popup-form">
+        <div class="form-content">
+            <span id="close-form" class="close">&times;</span>
+            <h2>Before accessing your affiliate link, please complete this form to receive important updates about our affiliate program directly in your inbox.</h2>
+            <form id="affiliate-form" name="submit-to-google-sheet">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!--Mail Swaps-->
+
+    <section class="swaps" id="swaps">
+        <h2>Email Swaps</h2>
+
+        <div class="email-day" id="day-1">
+            <h3 class="email-header">Day 1 Email</h3>
+            <div class="email-content">
+                <p><strong>Subject:</strong> Transform Your Marketing with AI – Start Your Journey Today!</p>
+                <p><strong>Body:</strong> Hey [First Name],<br><br>
+                    Are you ready to take your digital marketing skills to the next level? I’m thrilled to introduce
+                    you to my latest ebook, "Digital Marketing Demystified: Strategies for Success in the AI Era."
+
+                    This comprehensive guide will walk you through the latest strategies that are transforming the
+                    marketing landscape. Whether you're new to the field or a seasoned pro, you'll find actionable
+                    insights that will help you elevate your marketing game in today's AI-driven world.
+
+                    Don't miss out on this opportunity to stay ahead of the curve. Get your copy now and start
+                    mastering the tools and techniques that are shaping the future of marketing.
+
+                    <br> 👉 [paste your link here] <br>
+
+                    Looking forward to hearing about your success!<br><br>
+
+                    Best regards,<br>
+                    [Your Name]<br>
+                    Best Regards,<br>
+                    Bhuvnesh Raghav
+                </p>
+            </div>
+        </div>
+
+        <div class="email-day" id="day-2">
+            <h3 class="email-header">Day 2 Email</h3>
+            <div class="email-content">
+                <p><strong>Subject:</strong> Uncover the Secrets to Digital Marketing Success!</p>
+                <p><strong>Body:</strong> Hi [First Name],<br><br>
+                    Hope you're doing well! I wanted to follow up on yesterday's email about my ebook, "Digital
+                    Marketing Demystified: Strategies for Success in the AI Era."
+
+                    In today's fast-paced digital world, it's crucial to stay ahead of the competition. My ebook is
+                    packed with practical tips and advanced strategies that will help you do just that. From
+                    mastering the basics to leveraging AI for better results, this guide has everything you need to
+                    succeed.
+
+                    If you haven’t grabbed your copy yet, now is the perfect time to dive in and start transforming
+                    your marketing approach.
+
+                    <br>👉 [paste your link here]<br>
+
+                    Here's to your success in the digital marketing world!<br><br>
+                    Best regards,<br>
+                    [Your Name]<br>
+                    Best Regards,<br>
+                    Bhuvnesh Raghav
+                </p>
+            </div>
+        </div>
+
+
+        <div class="email-day" id="day-3">
+            <h3 class="email-header">Day 3 Email</h3>
+            <div class="email-content">
+                <p><strong>Subject:</strong> Your Blueprint to AI-Powered Marketing Success Awaits!</p>
+                <p><strong>Body:</strong> Hi [First Name],<br><br>
+                    Just checking in to see if you've had a chance to explore my ebook, "Digital Marketing
+                    Demystified: Strategies for Success in the AI Era." If not, you’re missing out on a powerful
+                    resource that could change the way you approach digital marketing.
+
+                    This book isn’t just about theory – it’s a practical guide that takes you step by step through
+                    the strategies that are working right now in the AI era. Whether you want to boost your brand's
+                    online presence or drive more sales, these insights are designed to help you achieve your goals.
+
+                    Don't let this opportunity pass by! Equip yourself with the knowledge and tools that will keep
+                    you ahead in the ever-evolving digital landscape.
+
+                    <br>👉 [paste your link here]<br>
+
+                    I can't wait to hear how these strategies work for you!<br><br>
+                    Best regards,<br>
+                    [Your Name]<br>
+                    Best Regards,<br>
+                    Bhuvnesh Raghav
+                </p>
+            </div>
+        </div>
+
+
+        <div class="email-day" id="day-4">
+            <h3 class="email-header">Day 4 Email</h3>
+            <div class="email-content">
+                <p><strong>Subject:</strong> Ready to Revolutionize Your Marketing Strategy?</p>
+                <p><strong>Body:</strong> Hi [First Name],<br><br>
+                    I wanted to follow up and make sure you didn’t miss out on this incredible opportunity. My
+                    ebook, "Digital Marketing Demystified: Strategies for Success in the AI Era," is more than just
+                    a read—it’s your blueprint for mastering digital marketing in today's AI-driven world.
+
+                    This guide covers everything from the fundamentals to advanced strategies that can take your
+                    marketing efforts to the next level. Whether you're looking to improve your social media game,
+                    optimize your SEO, or harness the power of AI, this book has got you covered.
+
+                    Don’t wait—start revolutionizing your marketing strategy today!
+
+                    <br>👉 [paste your link here]<br>
+
+                    Here’s to your continued success in digital marketing!<br><br>
+                    Best regards,<br>
+                    [Your Name]<br>
+                    Best Regards,<br>
+                    Bhuvnesh Raghav
+                </p>
+            </div>
+        </div>
+
+        <!-- Add more days as needed -->
+    </section>
+
+    <section class="banner-gallery">
+        <h2>Affiliate Banners</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images\Purple Modern Futuristic Technology Pitch Deck Presentation.png" alt="Banner 1" class="banner-image">
+                <button class="download-btn">Download</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images\banner1.png" alt="Banner 2"
+                    class="banner-image">
+                <button class="download-btn">Download</button>
+            </div>
+            <div class="gallery-item">
+                <img src="images\banner2.jpg" alt="Banner 3" class="banner-image">
+                <button class="download-btn">Download</button>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images\banner3.jpg" alt="Banner 3" class="banner-image">
+                <button class="download-btn">Download</button>
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Panamicz. All rights reserved.</p>
+        <p><a href="https://panamicz.site/privacypolicy.html"> Privacy Policy </a>| <a href="https://panamicz.site/Terms_and_Conditions.html">Terms of Service</a> | <a href="https://panamicz.site/disclemer.html"> Disclaimer</a> | <a href="https://panamicz.site/help.html">Help</a> </p>
+    </footer>
+    <script>
+        // Show the popup form
+document.getElementById('link-btn').addEventListener('click', function() {
+    document.getElementById('popup-form').style.display = 'flex';
+});
+
+// Close the popup form
+document.getElementById('close-form').addEventListener('click', function() {
+    document.getElementById('popup-form').style.display = 'none';
+});
+
+// Close the popup form when clicking outside of the form
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('popup-form')) {
+        document.getElementById('popup-form').style.display = 'none';
+    }
+});
+
+
+//eamil swap js
+document.querySelectorAll('.email-header').forEach(header => {
+    header.addEventListener('click', () => {
+        // Close all open email contents
+        document.querySelectorAll('.email-content').forEach(content => {
+            content.classList.remove('show'); // Hide all email contents
+        });
+
+        // Open the clicked email's content
+        const content = header.nextElementSibling;
+        content.classList.add('show'); // Show the corresponding email content
+    });
+});
+
+
+
+/*form submission */
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz0yBHYEmdu7h5lQrmWe1lLHPBC6qyZOOAg68J4qflGh77o4I1pYJWAGxGkBJcvAG9Bzw/exec'
+  const form = document.forms['submit-to-google-sheet']
+const sus = document.getElementById('ss');
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+
+       
+         window.location.href = 'https://www.jvzoo.com/affiliate/affiliateinfonew/index/410873';
+
+        console.log(sus)
+        setTimeout(function()
+  {
+    sus.innerHTML="";
+  },100)
+  form.reset();
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+  
+ 
+  const playSound = () => {
+  const audio = new Audio("tap.mp3");
+  audio.play();
+};
+
+    </script>
+</body>
+</html>
