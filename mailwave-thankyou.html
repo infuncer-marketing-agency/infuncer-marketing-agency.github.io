@@ -136,6 +136,22 @@ body {
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        // Elements
+const downloadEbookButton = document.getElementById('download-ebook');
+const ebookModal = document.getElementById('ebook-info');
+const closeModalButton = document.querySelector('.close-modal');
+
+// Show ebook modal
+downloadEbookButton.addEventListener('click', () => {
+    ebookModal.classList.remove('hidden');
+});
+
+// Close ebook modal
+closeModalButton.addEventListener('click', () => {
+    ebookModal.classList.add('hidden');
+});
+
+    </script>
 </body>
 </html>
