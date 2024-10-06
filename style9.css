@@ -138,6 +138,10 @@ body {
     margin-bottom: 30px;
 }
 
+.web_design{
+    cursor: pointer;
+}
+
 .cta-btn {
     padding: 12px 30px;
     background-color: #00ffb3;
