@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panamicz Portfolio - Web Design & Development</title>
+    <link rel="stylesheet" href="web-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Panamicz</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <!-- Hamburger Icon -->
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#services">Portfolio</a></li>
+            <li><a href="https://panamicz.site/help.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Our Portfolio</h2>
+        <p>We create impactful websites that engage users and drive business growth. Here are some of the services we offer:</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Our Expertise</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Web Design</h3>
+                <div class="circle-loader" data-percentage="90"></div>
+                <p class="service-description">Creating visually stunning and responsive websites tailored to your business needs.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>UI/UX Design</li>
+                    <li>Responsive Design</li>
+                    <li>Wireframing</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Backend Development</h3>
+                <div class="circle-loader" data-percentage="85"></div>
+                <p class="service-description">Developing scalable and secure back-end systems for seamless functionality.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Database Management</li>
+                    <li>API Integration</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Full Stack Development</h3>
+                <div class="circle-loader" data-percentage="95"></div>
+                <p class="service-description">Delivering end-to-end solutions with expertise in both front and back-end development.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React, Angular</li>
+                    <li>Node.js, Express</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>AI Integration</h3>
+                <div class="circle-loader" data-percentage="90"></div>
+                <p class="service-description">Integrating advanced AI solutions to enhance automation and decision-making processes.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Data Analysis</li>
+                    <li>Chatbot Integration</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Email Auto Responder</h3>
+                <div class="circle-loader" data-percentage="80"></div>
+                <p class="service-description">Automating email campaigns for efficient and personalized customer engagement.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>Email Campaign Automation</li>
+                    <li>API Integration</li>
+                    <li>SMTP Configuration</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Custom WordPress Plugin Development</h3>
+                <div class="circle-loader" data-percentage="95"></div>
+                <p class="service-description">Building custom WordPress plugins to extend the functionality of your website.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>PHP</li>
+                    <li>WordPress API</li>
+                    <li>JavaScript/jQuery</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Website Maintenance</h3>
+                <div class="circle-loader" data-percentage="90"></div>
+                <p class="service-description">Ensuring your website is always up-to-date, secure, and optimized for performance.</p>
+                <p>Relevant Skills:</p>
+                <ul>
+                    <li>Security Monitoring</li>
+                    <li>Performance Optimization</li>
+                    <li>Backup and Recovery</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact-info">
+            <p>📧 panamicz@gmail.com</p>
+            <p>📞 +91 7310790490</p>
+        </div>
+        <div class="social-links">
+            <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2024 Panamicz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    // Toggle the navigation menu
+    navLinks.classList.toggle('active');
+    // Toggle the hamburger animation
+    hamburger.classList.toggle('change');
+
+    
+    navLinks.style.display = "flex";
+});
+
+
+document.querySelectorAll('.circle-loader').forEach(function (loader) {
+    let percentage = loader.getAttribute('data-percentage');
+    loader.querySelector('.circle-progress').style.transform = `rotate(${percentage * 3.6}deg)`; // Properly set the rotation based on percentage
+    loader.querySelector('.circle-fill').style.transform = `rotate(${(percentage - 50) * 3.6}deg)`; // Fill the other half correctly
+});
+
+    </script>
+</body>
+</html>
