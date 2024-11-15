@@ -1,289 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPro - Your Ultimate Stock Price Analysis Tool</title>
-  
-  <style>
-    /* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockGaze - Real-Time Stock Analysis and Financial News</title>
+    <style>
+      /* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  color: #f1f1f1;
-  background-color: #121212;
-  line-height: 1.6;
-}
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #ddd;
+    background-color: #111;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
+/* Header Section */
 .header {
-  text-align: center;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  background-image: url('images/stockBg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  /*
-  background-color: #1e1e1e; */
+    text-align: center;
+    padding: 50px;
+    
+    background-size: cover;
+    color: #fff;
 }
-.header h1 {
-  font-size: 3em;
-  color: #f8f8f8;
-}
-.header p {
 
-  font-size: 1.5em;
-  color: #e4e4e4;
-  background-color: #262626;
+.hero h1 {
+    font-size: 2.8em;
+    margin: 0;
 }
+
+.hero p {
+    font-size: 1.5em;
+
+}
+
+.subheading {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ffeb3b;
+}
+
 .cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background-color: #4caf50;
-  color: #121212;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #e53935;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .cta-button:hover {
-  background-color: #388e3c;
+    background-color: #d32f2f;
 }
 
 /* Features Section */
-.features-section {
-  background-color: #181818;
-  padding: 50px 20px;
-  text-align: center;
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #222;
+    flex-wrap: wrap;
 }
-.features-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
+
 .feature {
-  margin-top: 20px;
+    text-align: center;
+    max-width: 200px;
+    margin: 20px;
+    font-size: 1.5rem;
 }
+
 .feature h3 {
-  font-size: 1.5em;
-  color: #4caf50;
+    color: #03a9f4;
 }
-.feature p {
-  color: #b0bec5;
+
+.feature img {
+  height: 100px;
+  width: 200px;
+}
+
+/* Trust Section */
+.trust {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #dcd9d9;
+    font-size: 25px;
+}
+
+.trust img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
 
 /* Testimonials Section */
-.testimonials-section {
-  background-color: #1e1e1e;
-  padding: 50px 20px;
-  text-align: center;
+.testimonials {
+    text-align: center;
+    padding: 50px;
+    background-color: #444;
 }
-.testimonials-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
+
 .testimonial {
-  margin-top: 20px;
-  font-style: italic;
-  color: #b0bec5;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
 }
 
 /* Pricing Section */
-.pricing-section {
-  background-color: #181818;
-  padding: 50px 20px;
-  text-align: center;
+.pricing {
+    text-align: center;
+    padding: 50px;
+    background-color: #222;
 }
-.pricing-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+
+.price-box {
+    display: inline-block;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
 }
+
 .price {
-  font-size: 3em;
-  color: #4caf50;
-}
-.price span {
-  font-size: 0.5em;
-  color: #b0bec5;
+    font-size: 2em;
+    color: #ffeb3b;
 }
 
-/* Footer */
+.buy-now-button {
+    padding: 10px 25px;
+    background-color: #03a9f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+    background-color: #0288d1;
+}
+
+/*pain section*/
+
+#pain-points {
+    padding: 40px 20px;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+#pain-points h2 {
+    font-size: 2em;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.pain-point-item {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pain-point-item h3 {
+    color: #ff5722;
+    font-size: 1.5em;
+}
+
+.pain-point-item p {
+    font-size: 1em;
+    color: #d0d0d0;
+}
+
+/* Responsive styling */
+@media (min-width: 768px) {
+    #pain-points {
+        padding: 60px 40px;
+    }
+    .pain-point-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+
+/* Footer Section */
 .footer {
-  background-color: #1e1e1e;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #111;
+    color: #bbb;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 1000px;
-  margin: 0 auto;
+.footer-content .footer-section {
+    max-width: 200px;
+    margin: 10px;
 }
 
-.footer h3 {
-  font-size: 1.2rem;
-  color: #4caf50;
-  margin-bottom: 15px;
+.footer-section h4 {
+    color: #03a9f4;
 }
 
-.footer p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
+.footer-section li {
+    margin: 5px 0;
 }
 
-.footer-links li {
-  margin: 5px 0;
+.footer-section a {
+    color: #bbb;
+    text-decoration: none;
 }
 
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+.footer-section a:hover {
+    color: #fff;
 }
 
-.footer-links a:hover {
-  color: #4caf50;
-}
-
-.footer-about, .footer-contact {
-  max-width: 300px;
-  margin: 15px;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #aaa;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 90%;
+    }
 }
 
-  </style>
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
 
+    .subheading {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .testimonials, .pricing, .footer {
+        padding: 20px;
+    }
+}
+
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>Stockgaze</h1>
-      <p>The Ultimate Tool for Real-Time Stock Analysis</p>
-      <a href="#pricing" class="cta-button">Buy Now for $99.99</a>
-    </div>
-  </header>
 
-  <section id="features" class="features-section">
-    <div class="container">
-      <h2>Key Features</h2>
-      <div class="feature">
-        <h3>Real-Time Stock Prices</h3>
-        <p>Get up-to-the-minute stock prices from the major exchanges, ensuring accuracy and speed.</p>
-      </div>
-      <div class="feature">
-        <h3>Customizable Filters</h3>
-        <p>View stock performance based on daily, monthly, or yearly data with easy-to-use filters.</p>
-      </div>
-      <div class="feature">
-        <h3>Financial News Feed</h3>
-        <p>Stay informed with the latest market news relevant to your stocks, keeping you ahead of the curve.</p>
-      </div>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="hero">
+            <h1>Welcome to StockGaze</h1>
+            <p>Your Ultimate Tool for Real-Time Stock Analysis and Financial News</p>
+            <p class="subheading">Join over <strong>900+ users</strong> making smarter trades every day!</p>
+            
+           <a href="#price-box"> <button class="cta-button">Get Started Now</button> </a>
+        </div>
+    </header>
 
-      <div class="feature">
-        <h3>Receive 2 Free Ebooks</h3>
-        <p>When you purchase Stockgaze, you’ll get two free ebooks on trading and the stock market</p>
-    </div>
-    
-
-    </div>
-  </section>
-
-  <section id="testimonials" class="testimonials-section">
-    <div class="container">
-      <h2>What Our Users Say</h2>
-      <div class="testimonial">
-        <p>"Stockgaze has revolutionized my trading strategy. The real-time data and news feed keep me on top of the market."</p>
-        <p>- Alex R., Trader</p>
-      </div>
-      <div class="testimonial">
-        <p>"This is the best $100 I've spent on any stock tool. The filters are extremely helpful."</p>
-        <p>- Sarah M., Investor</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing" class="pricing-section">
-    <div class="container">
-      <h2>Get Started Today</h2>
-      <p class="price">$99.99 <span>one-time purchase</span></p>
-      
-      <a href="https://www.jvzoo.com/b/0/413109/14"><img src="https://i.jvzoo.com/0/413109/14" alt="Stockgaze" border="0" /></a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="https://panamicz.site/help.html">Contact Us</a></li>
-          <li><a href="https://panamicz.site/disclemer.html">Disclaimer</a></li>
-          <li><a href="https://panamicz.site/privacypolicy.html">Privacy Policy</a></li>
-          <li><a href="https://panamicz.site/Terms_and_Conditions.html">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-about">
-        <h3>About</h3>
-        <p>Our stockgaze, price software offers reliable, real-time tracking and market insights to help users make informed financial decisions.</p>
-      </div>
-      
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: panamicz@gmail.com</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <h3>Real-Time Stock Prices</h3>
+            <img src="images\price_chart.png" alt="Real-Time Stock Prices" class="feature-image">
        
-      </div>
-    </div>
-  
-    <div class="footer-bottom">
-      <p>&copy; 2024 Your panamicz. All rights reserved.</p>
-    </div>
-  </footer>
-  
-  
+            <p>Stay updated with up-to-the-minute stock prices from all major exchanges. Never miss a market move again!</p>
+        </div>
+        <div class="feature">
+            <h3>Customizable Filters</h3>
+            <img src="images\storkge_preview.png" alt="Customizable Filters" class="feature-image">
+            <p>Filter stock data by daily, monthly, or yearly views. Focus on the trends that matter most to you.</p>
+        </div>
+        <div class="feature">
+            <h3>Financial News Feed</h3>
+            <img src="images\5395993.png" alt="Financial News Feed" class="feature-image">
+            <p>Stay informed with relevant news that impacts your stocks. Always know what's driving the market.</p>
+        </div>
+        <div class="feature">
+            <h3>Receive 2 Free Ebooks</h3>
+            <img src="images\124052.jpg" alt="Financial News Feed" class="feature-image">
+            <p>With every StockGaze subscription, get 2 free ebooks on stock trading and market analysis!</p>
+        </div>
+    </section>
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+    <!-- Section of pain point -->
 
-  </script>
+     <section id="pain-points">
+    <h2>Your Pain Points, Solved with StockGaze</h2>
+    <div class="pain-point-item">
+        <h3>Constant Market Changes</h3>
+        <p>Tired of missing out on opportunities because the market moves too fast? StockGaze provides real-time updates so you're always in the know and never miss a chance to act.</p>
+    </div>
+    <div class="pain-point-item">
+        <h3>Too Much Information, Not Enough Insights</h3>
+        <p>Feeling overwhelmed by financial news? StockGaze curates relevant updates, making it easy for you to focus on what truly impacts your investments.</p>
+    </div>
+    <div class="pain-point-item">
+        <h3>Difficulty in Spotting Trends</h3>
+        <p>Can’t tell where the market is headed? Use StockGaze’s customizable filters to track trends over daily, monthly, or yearly views, tailored to your investment goals.</p>
+    </div>
+    <div class="pain-point-item">
+        <h3>Lack of Resources</h3>
+        <p>Don’t have access to quality resources? StockGaze includes expert analysis and 2 free ebooks to equip you with the knowledge needed to succeed.</p>
+    </div>
+</section>
+
+
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <p>Trusted by professionals from top financial institutions:</p>
+        <img src="images\trust.png" alt="Trusted logos">
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"StockGaze has revolutionized my trading strategy. The real-time data and news feed keep me on top of the market."</p>
+            <p>- Alex R., Trader</p>
+        </div>
+        <div class="testimonial">
+            <p>"This is the best $100 I've spent on any stock tool. The filters are extremely helpful."</p>
+            <p>- Sarah M., Investor</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2>Unlock Your Stock Market Potential with StockGaze</h2>
+        <p>Start making more informed trading decisions and stay ahead of the competition.</p>
+        <div class="price-box" id="price-box">
+          <a href="https://www.jvzoo.com/b/0/413109/14"><img src="https://i.jvzoo.com/0/413109/14" alt="Stockgaze" border="0" /></a>
+   
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="https://panamicz.site/help.html">Contact Us</a></li>
+                  <li><a href="https://panamicz.site/disclemer.html">Disclaimer</a></li>
+                  <li><a href="https://panamicz.site/privacypolicy.html">Privacy Policy</a></li>
+                  <li><a href="https://panamicz.site/Terms_and_Conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>Our StockGaze software offers reliable, real-time tracking and market insights to help users make informed financial decisions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: panamicz@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
