@@ -4,7 +4,612 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panamicz your only marketing Solution</title>
-    <link rel="stylesheet" href="style.css">
+
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+
+   <style>
+    /* General Styles */
+    * {
+      box-sizing: border-box;
+    }
+
+body {
+    margin: 0;
+    font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+.sus{
+    color: white;
+}
+
+#hhd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #000000, #2b2c2e);
+    box-shadow: 0 4px 15px rgba(227, 226, 226, 0.601);
+    width: 70vw;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #6c63ff;
+}
+
+.chat-now .btn {
+    padding: 8px 15px;
+    background: #494949;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.chat-now .btn:hover {
+    background: #6c63ff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #f6f6f6;
+    border-radius: 2px;
+    transition: transform 0.3s;
+}
+
+/*hero text */
+
+.herotext{
+    width: 65vw;
+    text-align: center;
+}
+
+.herotext h1{
+    font-size: 7rem;
+    color: #f6f6f6;
+}
+
+
+.herotext p {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.herotext button{
+    background-color: #000000;
+    color: #fafafa;
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/*services*/
+
+
+.servicediv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+    margin-top:25px ;
+    
+}
+.services-section {
+    text-align: center;
+    
+    background: #333;
+    
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #6c63ff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "NEW!";
+    font-size: 1rem;
+    color: #6c63ff;
+    position: absolute;
+    top: -10px;
+    right: 450px;
+    font-weight: bold;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    width: 70;
+}
+
+.service-item {
+    background: rgb(64, 64, 64);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    color: #fffdfd;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #f8f8f8;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.text{
+   text-align: center;
+   width: 98vw;
+   margin-top: 45px ;
+}
+
+.text h1{
+    font-size: 2.5rem;
+    color: antiquewhite;
+}
+
+.text p{
+    font-size: 2rem;
+    color: antiquewhite;
+}
+
+.about{
+    display: flex;
+    padding: 30px;
+    width: 65vw;
+  
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.oth{
+   
+   width: 25vw;
+
+   border-top: 2px solid white;
+}
+
+.oth h4{
+    display: inline-block;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: antiquewhite;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.oth ul li {
+    display: flex;
+    color: #f8f8f8;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 10px;
+}
+
+.oth ul li .span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    font-size: 1.5rem;
+    margin-right:10px ;
+    padding: 5px;
+    background-color: #b0afaf;
+    color: #000000;
+   border-radius: 50%;
+   
+}
+
+.pana{
+   
+    width: 25vw;
+    
+    border-top: 2px solid white;
+ }
+
+ .pana h4{
+    display: inline-block;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: antiquewhite;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+
+.pana ul li {
+    display: flex;
+    color: #f8f8f8;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 10px;
+}
+
+.pana ul li .span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    font-size: 1.5rem;
+    margin-right:10px ;
+    padding: 5px;
+    background-color: #74de3a;
+    color: #ffffff;
+   border-radius: 50%;
+   
+}
+
+
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.faq-title {
+    font-size: 2rem;
+    color: #6c63ff;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #4a4a4a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(125, 125, 125, 0.249);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: #353535;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: #6c63ff;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #555;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: 1.6;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust based on answer length */
+    padding: 10px 20px;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #121212;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #00ffb3;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .navbar{
+        background: #000000;
+        width: 100vw;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgb(0, 0, 0);
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .chat-now {
+        display: none;
+    }
+
+    .herotext{
+        width: 85vw;
+        text-align: center;
+    }
+
+.herotext h1{
+    font-size: 2rem;
+    color: #f6f6f6;
+}
+
+.herotext p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+
+}
+
+ .pana {
+    border: none;
+}
+.oth{
+    border: none; 
+}
+
+.oth ul li{
+    font-size: 20px;
+}
+
+.pana ul li  {
+   font-size: 20px;
+}
+}
+
+
+.popup-form-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 150%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTRzb3VwOTNsa2c5cWdsbXlreWY3MzlqbHQwZ2JsMHpjbW1kY2t4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/V4NSR1NG2p0KeJJyr5/giphy.gif') no-repeat center center / cover;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+    .popup-form {
+      background: #353535;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: popin 0.3s ease;
+    }
+
+    @keyframes popin {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .popup-form h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+      color: aliceblue;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: aliceblue;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      color: aliceblue;
+      background-color: #353535;
+      outline: none;
+    }
+
+    .popup-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .popup-actions button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .popup-actions .submit-btn {
+      background-color: #586068;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .popup-actions .close-btn {
+      background-color: #ccc;
+    }
+
+    @media (max-width: 480px) {
+      .popup-form {
+        padding: 20px;
+      }
+    }
+
+    .loader {
+        position: relative;
+            display: none;
+           position: absolute;
+           top: 50%;
+    border: 8px solid #a0e7ff;
+    border-top: 8px solid #be69ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+   </style>
 </head>
 <body>
     <header id="hhd">
@@ -21,8 +626,8 @@
            <!-- <li><a href="#reviews">Reviews</a></li> -->
             <li><a href="#faqs_section">FAQs</a></li>
         </ul>
-        <div class="chat-now">
-            <a href="https://wa.me/917310790490?text=Hey%20Bhuvnesh,%20I%20want%20help" class="btn">Chat Now</a>
+        <div class="chat-now btn">
+            <p class="btn" onclick="openForm()">Book now</p>
         </div>
         <div class="hamburger">
             <span></span>
@@ -36,10 +641,87 @@
 
     <div class="cont">
        <div class="herotext">
-        <h1>Optimize Your Marketing For More Profit.</h1>
-        <p>A professional team of specialists, delivering remarkable work to our clients all over india!</p>
-       <a href="https://wa.me/917310790490?text=Hey%20Bhuvnesh,%20I%20want%20help"> <button>Book a call now</button>    </a>
+        <h1>Protecting Your Digital World</h1>
+        <p>Empowering businesses and individuals with top-tier cybersecurity solutions. Stay ahead of threats with Panamicz.Security.</p>
+       <button class="btn" onclick="openForm()">Book video meeting now</button>
     </div>
+
+    <div class="popup-form-overlay" id="popupOverlay">
+        <div class="popup-form">
+          <h2>Appointment Form</h2>
+          <form id="appointmentForm" name="submit-to-google-sheet">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp Number</label>
+              <input type="text" id="whatsapp" name="whatsapp" />
+            </div>
+            <div class="form-group">
+              <label for="time">Select Time *</label>
+              <div style="display: flex; gap: 10px;">
+    
+               <select id="hour" name="Hour" required>
+      <option value="">Hour</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select>
+    
+    
+    <select id="minute" name="minute" required>
+      <option value="">Min</option>
+      <option>00</option>
+      <option>15</option>
+      <option>30</option>
+      <option>45</option>
+    </select>
+    
+                <select id="ampm" name="ampm" required>
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="date">Select Date *</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="timezone">Select Timezone *</label>
+              <select id="timezone" name="timezone" required>
+                <option value="">-- Select Timezone --</option>
+                <option value="Pacific">Pacific Time (PT)</option>
+                <option value="Mountain">Mountain Time (MT)</option>
+                <option value="Central">Central Time (CT)</option>
+                <option value="Eastern">Eastern Time (ET)</option>
+                <option value="Alaska">Alaska Time (AKT)</option>
+                <option value="Hawaii">Hawaii-Aleutian Time (HAT)</option>
+              </select>
+            </div>
+            <div class="popup-actions">
+              <button type="submit" class="submit-btn">Submit</button>
+              <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
+            </div>
+          </form>
+          <div class="loader"></div>
+          <span class="sus"></span>
+        </div>
+      </div>
 
     </div>
 
@@ -51,45 +733,31 @@
         <div class="services-container">
             <div class="service-item">
                 <div class="service-icon">
-                    <img src="images\marketing.png" alt="Strategic Marketing"> <!-- Replace with your icon -->
+                    <img src="https://cdn-icons-png.freepik.com/256/17810/17810838.png?ga=GA1.1.1789833480.1727257325&semt=ais_hybrid" alt="Strategic Marketing"> <!-- Replace with your icon -->
                 </div>
-                <h3>Strategic Marketing</h3>
-                <p>Catapult your brand into the spotlight with our genius strategies – it’s like magic, but for marketing.</p>
+                <h3>Network Security Audits</h3>
+                <p>Comprehensive vulnerability assessments and penetration testing to secure your internal and external networks.</p>
             </div>
             <div class="service-item">
                 <div class="service-icon">
-                    <img src="images\Creative Design.png" alt="Creative Design"> <!-- Replace with your icon -->
+                    <img src="https://cdn-icons-png.freepik.com/256/13089/13089685.png?ga=GA1.1.1789833480.1727257325&semt=ais_hybrid" alt="Creative Design"> <!-- Replace with your icon -->
                 </div>
-                <h3>Creative Design</h3>
-                <p>Picture-perfect branding and graphics – we make your competitors jealous, and your audience adore you.</p>
+                <h3>Threat Monitoring & Incident Response</h3>
+                <p>24/7 monitoring with real-time alerts and rapid incident response to neutralize cyber threats before they cause damage.</p>
             </div>
             <div class="service-item">
                 <div class="service-icon">
-                    <img src="images\social-media.png" alt="Social Media Management"> <!-- Replace with your icon -->
+                    <img src="https://cdn-icons-png.freepik.com/256/8481/8481124.png?ga=GA1.1.1789833480.1727257325&semt=ais_hybrid" alt="Social Media Management"> <!-- Replace with your icon -->
                 </div>
-                <h3>Social Media Management</h3>
-                <p>Hands-free social success! While you focus on your cat videos, we’ll make sure your brand shines across all social platforms.</p>
+                <h3>Data Encryption & Privacy Solutions</h3>
+                <p>Implementing strong encryption practices and privacy frameworks to keep sensitive data safe from breaches.</p>
             </div>
             <div class="service-item">
                 <div class="service-icon">
-                    <img src="images\technicalhelp.png" alt="Technical Solutions"> <!-- Replace with your icon -->
+                    <img src="https://cdn-icons-png.freepik.com/256/16874/16874519.png?ga=GA1.1.1789833480.1727257325&semt=ais_hybrid" alt="Technical Solutions"> <!-- Replace with your icon -->
                 </div>
-                <h3>Technical Solutions</h3>
-                <p>From tech wizardry to seamless online experiences, we turn digital hiccups into high-fives for your users.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <img src="images\search-engine-optimization.png" alt="Search Engine Optimization"> <!-- Replace with your icon -->
-                </div>
-                <h3>Search Engine Optimization (SEO)</h3>
-                <p>Boost your online swagger! We’ll spruce up your website so Google has no choice but to be your biggest fan.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <img src="images\automation.png" alt="Automation Services"> <!-- Replace with your icon -->
-                </div>
-                <h3>Automation Services</h3>
-                <p>Automatically enhance efficiency! Our automation tricks make your processes smoother than a freshly buttered slide.</p>
+                <h3>Cybersecurity Consulting & Training</h3>
+                <p>Expert guidance and hands-on training to empower your team with the knowledge and strategies to stay secure.</p>
             </div>
         </div>
     </section>
@@ -141,31 +809,29 @@
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>Why should I choose Panamicz over other agencies?</h3>
+                    <h3>What types of businesses do you work with?</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Choosing Panamicz means choosing a results-driven, client-focused, and technologically advanced digital marketing partner.
-                        With a proven track record, personalized strategies, and a commitment to transparent communication, we are confident in our ability to elevate your online presence and drive sustainable business growth.</p>
+                    <p>We work with businesses of all sizes—from startups to large enterprises—across various industries including finance, healthcare, e-commerce, and tech. Our cybersecurity solutions are tailored to fit your unique needs and risk levels.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>What sets Panamicz apart from the competition?</h3>
+                    <h3>How do you respond to a cybersecurity threat?</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Panamicz stands out in the crowded digital advertising landscape by offering a potent combination of advanced technology, customization options, data-driven insights, and a proven track record.</p>
+                    <p>Our team provides 24/7 threat monitoring and rapid incident response. Once a threat is detected, we immediately investigate, contain the breach, mitigate damage, and provide a detailed post-incident report with recommendations to prevent future issues.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>How can Panamicz guarantee accurate reporting?</h3>
+                    <h3>Can you help train our staff on cybersecurity best practices?</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Panamicz's commitment to accuracy is upheld through advanced technology, real-time validation, transparency, a knowledgeable team, and a rigorous quality control process.
-                        By choosing Panamicz, clients can trust that their reporting is reliable and reflects the most accurate and current data available.</p>
+                    <p>Absolutely. We offer expert-led training sessions for your team covering phishing awareness, password hygiene, data protection, and safe internet practices to reduce human error and build a strong security culture.</p>
                 </div>
             </div>
             
@@ -212,6 +878,61 @@ faqItems.forEach(item => {
         item.classList.toggle("active");
     });
 });
+
+
+const overlay = document.getElementById('popupOverlay');
+    const dateInput = document.getElementById('date');
+
+    function openForm() {
+      overlay.style.display = 'flex';
+
+      // Disable past dates
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+
+    function closeForm() {
+      overlay.style.display = 'none';
+      document.getElementById('appointmentForm').reset();
+    }
+
+
+
+    
+          /* submitting form */
+
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbyqfZ_mVZAJAznBYntZLufUcauoJUZHE8nMunFo_vCoDDKE-8bjOxiLh0Bi4-caFmmB/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+ let sus = document.querySelector('.sus')
+     
+ let loder = document.querySelector('.loader')
+  form.addEventListener('submit', e => {
+    
+    loder.style.display = 'block';
+
+    form.style.display = 'none';
+
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         
+  setTimeout(function()
+  {
+    loder.style.display = 'none';
+    sus.innerHTML="Your meeting is successfully scheduled";
+  },2000)
+  form.reset();
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+  
+  const playSound = () => {
+  const audio = new Audio("new-yearsing.mp3");
+  
+};
+
+document.querySelector("#submitb").addEventListener("click", playSound);
 
     </script>
 
